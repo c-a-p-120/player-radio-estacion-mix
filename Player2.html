@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://radiozone.net/assets/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="https://radiozone.net/assets/css/all.min.css" rel="stylesheet" />
+        <link href="https://radiozone.net/assets/css/styles.css" rel="stylesheet" />
+        <link href="https://radiozone.net/assets/css/splide.min.css" rel="stylesheet" />
+        <link href="https://radiozone.net/assets/css/custom.css" rel="stylesheet" />
+		<link href="https://radiozone.net/assets/css/main.css" rel="stylesheet" />
+		<link href="https://radiozone.net/assets/css/form.css" rel="stylesheet" />
+		<link rel="stylesheet" href="https://radiozone.net/assets/bundles/datatables/datatables.min.css">
+	    <link rel="stylesheet" href="https://radiozone.net/assets/bundles/datatables/DataTables-1.10.16/css/dataTables.bootstrap4.min.css">
+	    <link rel="stylesheet" href="https://radiozone.net/assets/bundles/izitoast/css/iziToast.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://radiozone.net/assets/js/funtions.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		 <!-- Owl Stylesheets -->
+         <link rel="stylesheet" href="https://radiozone.net/assets/owlcarousel/assets/owl.carousel.min.css">
+        <link rel="stylesheet" href="https://radiozone.net/assets/owlcarousel/assets/owl.theme.default.min.css">
+		<script>
+        
+            $(document).ready(function(){          
+                      var darkMode;
+            
+            if (localStorage.getItem('dark-mode')) {  
+              // if dark mode is in storage, set variable with that value
+              darkMode = localStorage.getItem('dark-mode');  
+            } else {  
+              // if dark mode is not in storage, set variable to 'light'
+              darkMode = '';  
+            }
+            
+            // set new localStorage value
+            localStorage.setItem('dark-mode', darkMode);
+            
+            
+            if (localStorage.getItem('dark-mode') == 'dark-theme') {
+              // if the above is 'dark' then apply .dark to the body
+              $('body').addClass('dark-theme');  
+              // hide the 'dark' button
+              $('.dark-button').hide();
+              // show the 'light' button
+              $('.light-button').show();
+            }
+            
+            
+            // Toggle dark UI
+            
+            $('.dark-button').on('click', function() {  
+              $('.dark-button').hide();
+              $('.light-button').show();
+              $('body').addClass('dark-theme');  
+              // set stored value to 'dark'
+              localStorage.setItem('dark-mode', 'dark-theme');
+            });
+            
+            $('.light-button').on('click', function() {  
+              $('.light-button').hide();
+              $('.dark-button').show();
+              $('body').removeClass('dark-theme');
+              // set stored value to 'light'
+              localStorage.setItem('dark-mode', 'light-theme');   
+            });
+            });         
+          
+          
+          
+      </script>
+      <link rel="shortcut icon" href="https://radiozone.net/assets/images/favicon.png">
+    </head>
+<body>
+<script type="text/javascript" src="https://c-a-p-120.github.io/player-radio-estacion-mix/radio_js_tools.0.9.1.js" ></script>
+
+ <style>
+      h1 {
+    font-size: 1.5em;
+    color: #FF2D00;
+    background-color: transparent;
+}
+#song {
+    font-size: 1.2em;
+    color: #e56d00;
+    background-color: transparent;
+    font-family: monospace, Arial;
+}
+
+ </style>     
+
+  
+ <!-- Page content-->
+                    <center>
+                           <div class="music-player m-3">
+                        <h1>ESTACION MIX</h1>
+                        <div class="player paused">
+                          <div class="album">
+                            <div class="cover">
+                              <div><img src="https://image.jimcdn.com/app/cms/image/transf/dimension=350x10000:format=png/path/sc40a039d49acf98a/image/icbe12cae2b3da2d2/version/1628894274/image.png"alt="" /></div>
+                            </div>
+                          </div>
+                          
+                          <div class="info">
+                           
+                         <FONT FACE="courier" SIZE=3 COLOR="1150af">
+ 🔊 Sonando...</FONT>
+                            <div id="song"></div>
+        
+		<script>
+		  var sendungcontainer = document.getElementById('sendung');
+
+		  var show_station = function(station){
+			  sendungcontainer.innerHTML = "DJ/Moderador: " + station['djs'] +
+				"<br>Transmisión: " + station.current_playlist['name'];
+		  }
+
+		  var songcontainer = document.getElementById('song');
+
+		 var show_song = function(song){
+			  songcontainer.innerHTML = "" + song['title'] +
+				"<br> " + song.artist["name"];
+		  }
+
+			laut.fm.station('estacionmix').current_song(show_song, true);
+            laut.fm.station('estacionmix').info(show_station, true);
+			
+    	</script>
+                            <div class="time">
+                              <span class="current-time">0:00</span>
+                              <span class="progress"><span></span></span>
+                              <span class="duration">0:00</span>
+                            </div>
+                          </div>
+                          
+                          <div class="actions">
+                            
+                            <button class="button play-pause">
+                              <div class="arrow"></div>
+                            </button>
+                            
+                          </div>
+                          
+                          <audio prelaod, src="http://strw1.openstream.co/864" id="audio"></audio>
+                        </div>
+                      </div>
+                      </center>
+<style>
+    body {
+    background-color: transparent;
+}
+.player {
+    position: relative;
+    overflow: hidden;
+    padding:20px 22px 0px 22px;
+    margin: 15px 0 0 0;
+}
+.album {
+    position: relative;
+    left: 50%;
+    width: 15em;
+    height: 15em;
+    margin-bottom: -20%;
+}
+</style><!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Report problem</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+       <form id="queryForm" method="POST" action="https://radiozone.net/">
+            <div class="modal-body">
+				<div class="form-outline mb-2">
+					<label class="form-label" for="username"></label>
+					<div class="colsm">
+						<input type="text" id="name" name="name" class="form-control"
+					  placeholder="Name" />
+					</div>
+				</div>
+               <div class="form-outline mb-2">
+					<label class="form-label" for="username"></label>
+					<div class="colsm">
+						<input type="email" id="email" name="email" class="form-control"
+					  placeholder="Email" />
+					</div>
+				</div>
+				<div class="form-outline mb-2">
+					<label class="form-label" for="password"></label>
+					 <div class="colsm">
+						<input type="text" id="number" name="number" class="form-control"
+					  placeholder="Phone Number" />
+					</div>
+				</div>
+				<div class="form-outline mb-2">
+					<label class="form-label" for="password"></label>
+					 <div class="colsm">
+					  <textarea name="description" rows="5" name="description" class="form-control" placeholder="Description"></textarea>
+					</div>
+				</div>
+                <div class="form-outline mb-2">
+					<label class="form-label" for="password"></label>
+					 <div id="resp"></div>
+				</div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="submit" name="sub" onclick="SubQuery('query','https://radiozone.net/')" class=" signup-btn btn btn-primary" tabindex="4">Send report</button>
+            </div>
+        </form>
+    </div>
+  </div>
+</div>	
+			</div>
+		</div>
+	</div>
+</div>
+ <!-- Core theme JS-->
+        <script src="https://radiozone.net/assets/js/music-player.js"></script>
+        <script src="https://radiozone.net/assets/js/scripts.js"></script>
+        <script src="https://radiozone.net/assets/js/splide.min.js"></script>
+		<script src="https://radiozone.net/assets/js/menuspy.min.js"></script>
+		<script src="https://radiozone.net/assets/js/imglazyload.js"></script>
+		<script src="https://radiozone.net/assets/js/custom.js"></script>
+		<script type="text/javascript" src="https://radiozone.net/assets/js/jquery.validate.js"></script>
+		<!-- javascript -->
+     <script src="https://radiozone.net/assets/owlcarousel/owl.carousel.js"></script>
+		 <script>
+          var elm = document.querySelector('#main-header');
+          var ms = new MenuSpy(elm);
+        </script>
+		<script>
+			//lazy loading
+			$('.page-itemlist img').imgLazyLoad({
+				// jquery selector or JS object
+				container: window,
+				// jQuery animations: fadeIn, show, slideDown
+				effect: 'fadeIn',
+				// animation speed
+				speed: 600,
+				// animation delay
+				delay: 400,
+				// callback function
+				callback: function(){}
+			});
+		</script>
+        <script>
+          new Splide( '#secondary-slider', {
+            fixedWidth: 1000,
+            rewind    : true,
+            gap       : 10,
+            dots:false,
+            perPage : 7,
+	        autoplay: true,
+            pagination: false,
+          } ).mount();
+        </script>
+        <script>
+            $(document).ready(function() {
+              $('.owl-carousel').owlCarousel({
+                loop: true,
+                margin: 10,
+                responsiveClass: true,
+                autoplay:true,
+                autoplayTimeout:5000,
+                dots:false,
+                autoplayHoverPause:true,
+                responsive: {
+                  0: {
+                    items: 1,
+                    nav: true
+                  },
+                  600: {
+                    items: 1,
+                    nav: false
+                  },
+                  1000: {
+                    items: 2,
+                    nav: false,
+                    loop: true,
+                    margin: 20
+                  }
+                }
+              })
+            })
+          </script>
+        
+        <script>
+                $('#submit').click(function(){
+                   if($('#apply-form').val() == ''){
+                       $(".search-bar").addClass("warning");
+                   }else{
+                      $(".search-bar").removeClass("warning"); 
+                      
+                      window.location.href='https://radiozone.net/search/'+$('#apply-form').val();
+                   }
+                });
+     
+        </script>
+        <script src="https://radiozone.net/assets/bundles/datatables/datatables.min.js"></script>
+        <script src="https://radiozone.net/assets/bundles/datatables/DataTables-1.10.16/js/dataTables.bootstrap4.min.js"></script>
+        <!-- Page Specific JS File -->
+        <script src="https://radiozone.net/assets/js/page/datatables.js"></script>
+         <script src="https://radiozone.net/assets/bundles/izitoast/js/iziToast.min.js"></script>
+        <script src="https://radiozone.net/assets/js/bootstrap.min.js"></script>
+    </body>
+</html>

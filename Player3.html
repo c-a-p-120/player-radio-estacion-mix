@@ -1,0 +1,108 @@
+<title>PLAYER</title>
+		<meta charset="UTF-8">
+		<script type="text/javascript" src="radio_js_tools.0.9.1.js" ></script>
+	</head>
+	<body>
+   
+   <style>
+      h1 {
+    font-size: 1.5em;
+    color: #FF2D00;
+    background-color: transparent;
+}
+#song {
+    font-size: 1.2em;
+    color: #e56d00;
+    background-color: transparent;
+    font-family: monospace, Arial;
+}
+body {
+background-image: url(https://images4.alphacoders.com/227/227438.png);
+background-position: center center;
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: cover;
+background-color: #66999;
+}
+ </style>       
+        
+      <center><h1>ESTACION MIX</h1></center>
+        <!-- INFO RADIO <div id="sendung"></div> -->
+	      <center><FONT FACE="courier" SIZE=3 COLOR="1150af">
+ 🔊 Sonando...</FONT></center>
+           <!-- INFO ARTISTA --><center><div id="song"></div></center>
+        
+		<script>
+		  var sendungcontainer = document.getElementById('sendung');
+
+		  var show_station = function(station){
+			  sendungcontainer.innerHTML = "DJ/Moderador: " + station['djs'] +
+				"<br>Transmisión: " + station.current_playlist['name'];
+		  }
+
+		  var songcontainer = document.getElementById('song');
+
+		 var show_song = function(song){
+			  songcontainer.innerHTML = "" + song['title'] +
+				"<br> " + song.artist["name"];
+		  }
+
+			laut.fm.station('estacionmix').info(show_station, true);
+			laut.fm.station('estacionmix').current_song(show_song, true);
+    	</script>     
+
+
+<td height="300" align="center"><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://mejorenlaradio.com/player/luna/js/lunaradio.min.js"></script>
+        <div id="lunaradio" style="  height:300px;"></div>
+      
+	  
+	  <script>
+     jQuery(document).ready(function($) {
+	 $("#lunaradio").lunaradio({
+		userinterface: "big",
+		backgroundcolor: "transparent",
+		fontcolor: "#ffffff",
+		hightlightcolor: "#ffffff",
+		fontname: "Saira Condensed",
+	    googlefont: "Saira Condensed:wght@100",
+		fontratio: "0.7",
+		radioname: "ESCUCHA BUENA MUSICA",
+		scroll: "true",
+		coverimage: "https://image.jimcdn.com/app/cms/image/transf/dimension=350x10000:format=png/path/sc40a039d49acf98a/image/icbe12cae2b3da2d2/version/1628894274/image.png",
+		onlycoverimage: "false",
+		coverstyle: "animated",
+		usevisualizer: "real",
+		visualizertype: "8",
+		multicolorvisualizer: "false",	
+		color1: "#ffffff",
+		visualizeropacity: "0.1",
+		itunestoken: "1000lIPN",
+		usestreamcorsproxy: "", //true o false
+        corsproxy: "https://corsradio.herokuapp.com",
+        streamurl: "https://listen.openstream.co/6502/audio",
+        streamtype: "radiozeno", //shoutcast2, icecast2, radiozeno, radionomy, radiojar, radioco
+        icecastmountpoint: "",
+        shoutcastpath: "/stream",
+        shoutcastid: "1",
+        streamsuffix: "",
+        radionomyid: "",
+        radionomyapikey: "",
+        radiozenoid: "mwdqpn6gbm0uv",
+        radiojarid: "",
+        radiocoid: "",
+        itunestoken: "1000lIPN",
+        metadatainterval: "60000",
+        volume: "100",
+        autoplay: "true",
+        debug: "false",
+		displayliveicon: "true",
+		displayvisualizericon: "true",
+     });
+  });
+    </script>	&nbsp;</td>
+        </tr>
+      </table></td>
+    </tr>
+    <tr>
+    

@@ -1,6 +1,6 @@
 <title>PLAYER</title>
 		<meta charset="UTF-8">
-	<head>	
+<head>	
 <script type="text/javascript" src="https://c-a-p-120.github.io/player-radio-estacion-mix/radio_js_tools.0.9.1.js" ></script>
 	</head>
 	<body>
@@ -36,7 +36,7 @@ background-size: cover;
 background-color: #66999;
 }
  </style>       
-        
+
       <center><h1>ESTACION MIX</h1></center>
         <!-- INFO RADIO <div id="sendung"></div> -->
 	      <center><FONT FACE="courier" SIZE=3 COLOR="1150af">
@@ -62,10 +62,17 @@ background-color: #66999;
 			laut.fm.station('estacionmix').current_song(show_song, true);
     	</script>
 
-
 <td height="300" align="center"><script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
         <script src="https://masplay.000webhostapp.com/lunaradio-sincors.js"></script>
         <div id="lunaradio" style="  height:300px;"></div>
+   <div id="conter"><center>
+  <script type="text/javascript"> 
+//<![CDATA[
+    var ran
+    ran = Math.round(Math.random()*90000)
+      document.write(" Oyentes  " + ran + " ONLINE")
+      //]]>
+    </script>
   
   <script>
   $("#lunaradio").lunaradio({
@@ -105,11 +112,3 @@ background-color: #66999;
   debug: "false",
   });
 </script>
-  <div id="conter"><center>
-  <script type="text/javascript"> 
-//<![CDATA[
-    var ran
-    ran = Math.round(Math.random()*90000)
-      document.write(" Oyentes  " + ran + " ONLINE")
-      //]]>
-    </script>

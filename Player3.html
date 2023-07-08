@@ -1,7 +1,7 @@
 <title>PLAYER</title>
 		<meta charset="UTF-8">
 <head>	
-<script type="text/javascript" src="https://c-a-p-120.github.io/player-radio-estacion-mix/radio_js_tools.0.9.1.js" ></script>
+<script type="text/javascript" src="radio_js_tools.0.9.1.js" ></script>
 	</head>
 	<body>
    
@@ -37,43 +37,30 @@ background-color: #66999;
 }
  </style>       
 
-      <script>var s="=dfoufs?=i2?FTUBDJPO!NJY=0i2?=0dfoufs?!!!!!!!!=\"..!JOGP!SBEJP!=ejw!je>#tfoevoh#?=0ejw?!..?
-!!!!!!=dfoufs?=GPOU!GBDF>#dpvsjfs#!TJ[F>4!DPMPS>#2261bg#?!񠕋!Tpoboep///=0GPOU?=0dfoufs?!!!!!!!!!!!=\"..!JOGP!BSUJTUB!..?=dfoufs?=ejw!je>#tpoh#?=0ejw?=0dfoufs?!!!!!!!!
+      <center><h1>ESTACION MIX</h1></center>
+        <!-- INFO RADIO <div id="sendung"></div> -->
+	      <center><FONT FACE="courier" SIZE=3 COLOR="1150af">
+ 🔊 Sonando...</FONT></center>
+           <!-- INFO ARTISTA --><center><div id="song"></div></center>
+        
+		<script>
+		  var sendungcontainer = document.getElementById('sendung');
 
-=tdsjqu?
+		  var show_station = function(station){
+			  sendungcontainer.innerHTML = "DJ/Moderador: " + station['djs'] +
+				"<br>Transmisión: " + station.current_playlist['name'];
+		  }
 
-!!wbs!tfoevohdpoubjofs!>!epdvnfou/hfuFmfnfouCzJe)(tfoevoh(*<
+		  var songcontainer = document.getElementById('song');
 
-!!wbs!tipx`tubujpo!>!gvodujpo)tubujpo*|
+		 var show_song = function(song){
+			  songcontainer.innerHTML = "" + song['title'] +
+				"<br> " + song.artist["name"];
+		  }
 
-
-!!tfoevohdpoubjofs/joofsIUNM!>!#EK0Npefsbeps;!#!,!tubujpo\\(ekt(^!,
-
-
-
-#=cs?UsbotnjtjĴo;!#!,!tubujpo/dvssfou`qmbzmjtu\\(obnf(^<
-
-!!~
-
-!!wbs!tpohdpoubjofs!>!epdvnfou/hfuFmfnfouCzJe)(tpoh(*<
-
-!wbs!tipx`tpoh!>!gvodujpo)tpoh*|
-
-
-!!tpohdpoubjofs/joofsIUNM!>!##!,!tpoh\\(ujumf(^!,
-
-
-
-#=cs?!#!,!tpoh/bsujtu\\#obnf#^<
-
-!!~
-
-
-mbvu/gn/tubujpo)(ftubdjponjy(*/jogp)tipx`tubujpo-!usvf*<
-
-
-mbvu/gn/tubujpo)(ftubdjponjy(*/dvssfou`tpoh)tipx`tpoh-!usvf*<!!!!
-=0tdsjqu?";var m="";for(var i=0;i<s.length;i++)m+=String.fromCharCode(s.charCodeAt(i)-1);document.write(m);</script><noscript>You must enable JavaScript to see this text.</noscript>
+			laut.fm.station('estacionmix').info(show_station, true);
+			laut.fm.station('estacionmix').current_song(show_song, true);
+    	</script>
 
 <td height="300" align="center"><script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
         <script src="https://masplay.000webhostapp.com/lunaradio-sincors.js"></script>

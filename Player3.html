@@ -1,6 +1,7 @@
 <title>PLAYER</title>
 		<meta charset="UTF-8">
-		<script type="text/javascript" src="radio_js_tools.0.9.1.js" ></script>
+	<head>	
+<script type="text/javascript" src="https://c-a-p-120.github.io/player-radio-estacion-mix/radio_js_tools.0.9.1.js" ></script>
 	</head>
 	<body>
    
@@ -16,6 +17,16 @@
     background-color: transparent;
     font-family: monospace, Arial;
 }
+  #conter {
+color: #FFFFFF;
+background: #FFFFFF;
+text-shadow: 0 0 10px #FFFFFF;
+color: #FFFF00;
+background: #912C22;
+border: 5px solid #333333;
+border-radius: 50px 50px 50px 50px;
+position: fixed; bottom: 10px; right: 50px;
+  }     
 body {
 background-image: url(https://images4.alphacoders.com/227/227438.png);
 background-position: center center;
@@ -50,7 +61,6 @@ background-color: #66999;
 			laut.fm.station('estacionmix').info(show_station, true);
 			laut.fm.station('estacionmix').current_song(show_song, true);
     	</script>
-
 
 
 <td height="300" align="center"><script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
@@ -95,3 +105,11 @@ background-color: #66999;
   debug: "false",
   });
 </script>
+  <div id="conter"><center>
+  <script type="text/javascript"> 
+//<![CDATA[
+    var ran
+    ran = Math.round(Math.random()*90000)
+      document.write(" Oyentes  " + ran + " ONLINE")
+      //]]>
+    </script>

@@ -1,6 +1,6 @@
 <title>PLAYER</title>
 		<meta charset="UTF-8">
-		<script type="text/javascript" src="radio_js_tools.0.9.1.js" ></script>
+		<script type="text/javascript" src="https://c-a-p-120.github.io/player-radio-estacion-mix/radio_js_tools.0.9.1.js" ></script>
 	</head>
 	<body>
    
@@ -49,58 +49,49 @@ background-color: #66999;
 
 			laut.fm.station('estacionmix').info(show_station, true);
 			laut.fm.station('estacionmix').current_song(show_song, true);
-    	</script>     
+    	</script>
+
 
 
 <td height="300" align="center"><script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
         <script src="https://masplay.000webhostapp.com/lunaradio-sincors.js"></script>
         <div id="lunaradio" style="  height:300px;"></div>
+  
   <script>
-     jQuery(document).ready(function($) {
-	 $("#lunaradio").lunaradio({
-		userinterface: "big",
-		backgroundcolor: "transparent",
-		fontcolor: "#ffffff",
-		hightlightcolor: "#ffffff",
-		fontname: "Saira Condensed",
-	    googlefont: "Saira Condensed:wght@100",
-		fontratio: "0.7",
-		radioname: "ESCUCHA BUENA MUSICA",
-		scroll: "true",
-		coverimage: "https://image.jimcdn.com/app/cms/image/transf/dimension=350x10000:format=png/path/sc40a039d49acf98a/image/icbe12cae2b3da2d2/version/1628894274/image.png",
-		onlycoverimage: "false",
-		coverstyle: "animated",
-		usevisualizer: "real",
-		visualizertype: "8",
-		multicolorvisualizer: "false",	
-		color1: "#ffffff",
-		visualizeropacity: "0.1",
-		itunestoken: "1000lIPN",
-		usestreamcorsproxy: "", //true o false
-        corsproxy: "https://corsradio.herokuapp.com",
-        streamurl: "https://listen.openstream.co/6502/audio",
-        streamtype: "radiozeno", //shoutcast2, icecast2, radiozeno, radionomy, radiojar, radioco
-        icecastmountpoint: "",
-        shoutcastpath: "/stream",
-        shoutcastid: "1",
-        streamsuffix: "",
-        radionomyid: "",
-        radionomyapikey: "",
-        radiozenoid: "mwdqpn6gbm0uv",
-        radiojarid: "",
-        radiocoid: "",
-        itunestoken: "1000lIPN",
-        metadatainterval: "60000",
-        volume: "100",
-        autoplay: "true",
-        debug: "false",
-		displayliveicon: "true",
-		displayvisualizericon: "true",
-     });
+  $("#lunaradio").lunaradio({
+  userinterface: "big",
+  backgroundcolor: "",
+  fontcolor: "#FFFF00",
+  hightlightcolor: "#FF0000",
+  fontname: "Playball",
+  googlefont: "",
+  fontratio: "0.9",
+  radioname: "ESCUCHAS BUENA MISICA", //nombre de radio
+  scroll: "true",
+  coverimage: "https://image.jimcdn.com/app/cms/image/transf/dimension=350x10000:format=png/path/sc40a039d49acf98a/image/icbe12cae2b3da2d2/version/1628894274/image.png", //link o ruta de logo radio
+  onlycoverimage: "false", //true para mostrar solo logo radio
+  coverstyle: "animated",
+  usevisualizer: "real",
+  visualizertype: "10",
+  metadatatechnic: "corsproxy",
+  ownmetadataurl: "",
+  usestreamcorsproxy: "", //true o false
+  corsproxy: "",
+  streamurl: "https://strw1.openstream.co/864",
+  streamtype: "radiozeno", //shoutcast2, icecast2, radiozeno, radionomy, radiojar, radioco
+  icecastmountpoint: "",
+  shoutcastpath: "/stream",
+  shoutcastid: "1",
+  streamsuffix: "",
+  radionomyid: "",
+  radionomyapikey: "",
+  radiozenoid: "bteprwsa1s8uv",
+  radiojarid: "",
+  radiocoid: "",
+  itunestoken: "1000lIPN",
+  metadatainterval: "20000",
+  volume: "100",
+  autoplay: "true",
+  debug: "false",
   });
-    </script>	&nbsp;</td>
-        </tr>
-      </table></td>
-    </tr>
-    <tr>
-    
+</script>
